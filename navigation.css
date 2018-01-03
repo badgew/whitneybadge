@@ -1,0 +1,71 @@
+.about {
+  top: 30px;
+  left: 40px;
+}
+.type {
+  right: 100px;
+  top: 0px;
+  position:absolute;
+}
+li.intro.type{
+  margin:0;
+  padding:0;
+}
+.work {
+  bottom: 35px;
+  left: 50px;
+}
+.contact{
+  right: 50px;
+  bottom: 35px;
+}
+.page{
+  right: 50px;
+  bottom: 35px;
+}
+.content{
+  position:relative;
+}
+.content:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.content > li{
+  float:left;
+  clear:both;
+}
+
+.content:not(.static) > li:hover ~ .container li a {
+  color: white; 
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container li {
+  position: fixed; 
+}
+  
+.container .name {
+  top: 30px;
+  left: 50px; 
+}
+
+.container .type {
+  top: 30px;
+  right: 50px;
+}
+
+.container .work {
+  bottom: 30px;
+  left: 50px; 
+}
+
+.container .contact {
+  bottom: 30px;
+  right: 50px;
+}
