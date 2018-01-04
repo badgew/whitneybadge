@@ -103,7 +103,6 @@ a.title:hover:before{
 	display:inline-block;
 	text-decoration:none;
 }
-
 .title:hover span#type {
   display: inline-block;
 }
@@ -111,6 +110,15 @@ a.title:hover{
 	color:white;
 	cursor:default;
 	background-color:black;
+}
+.project-title{
+	font-size:100pt;
+	line-height:125pt;
+	letter-spacing:-1pt;
+	padding-top:10px;
+	font-weight:bolder;
+	display:inline-block;
+	text-decoration:none;
 }
 
 /* Large and up */
@@ -124,7 +132,7 @@ a.title:hover{
 	span#type{
 		display:none;
 		position:absolute;
-		margin-top:-35px;
+		margin-top:-30px;
 	}
 }
 
@@ -214,7 +222,10 @@ a.title:hover{
 @media screen and (max-width: 39.9375em) {
 	.title{
 		font-size:50pt;
-		line-height:1.1;
+	}
+	.project-title{
+		font-size:50pt;
+		line-height:62pt;
 	}
 	p{
 		font-size:20pt;
@@ -254,6 +265,9 @@ a.title:hover{
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
 	.title{
+		font-size:75pt;
+	}
+	.project-title{
 		font-size:75pt;
 	}
 	p{
