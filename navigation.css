@@ -1,7 +1,3 @@
-.about {
-  top: 30px;
-  left: 40px;
-}
 .type {
   right: 100px;
   top: 0px;
@@ -12,16 +8,16 @@ li.intro.type{
   padding:0;
 }
 .work {
-  bottom: 35px;
+  bottom: 30px;
   left: 50px;
 }
 .contact{
   right: 50px;
-  bottom: 35px;
+  bottom: 30px;
 }
 .page{
   right: 50px;
-  bottom: 35px;
+  bottom: 30px;
 }
 .content{
   position:relative;
@@ -68,4 +64,73 @@ li.intro.type{
 .container .contact {
   bottom: 30px;
   right: 50px;
+}
+
+
+/* Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .work {
+    bottom: 25px;
+    left: 40px;
+  }
+  .contact{
+    right: 40px;
+    bottom: 25px;
+  }
+  .page{
+    right: 40px;
+    bottom: 25px;
+  }
+  .container .name {
+    top: 25px;
+    left: 40px; 
+  }
+  .container .type {
+    top: 25px;
+    right: 40px;
+  }
+  .container .work {
+    bottom: 25px;
+    left: 40px; 
+  }
+  .container .contact {
+    bottom: 25px;
+    right: 40px;
+  }
+}
+
+
+/* responsive scaling */
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+  .work {
+    bottom: 20px;
+    left: 30px;
+  }
+  .contact{
+    right: 30px;
+    bottom: 20px;
+  }
+  .page{
+    right: 30px;
+    bottom: 20px;
+  }
+  .container .name {
+    top: 20px;
+    left: 30px; 
+  }
+  .container .type {
+    top: 20px;
+    right: 30px;
+  }
+  .container .work {
+    bottom: 20px;
+    left: 30px; 
+  }
+  .container .contact {
+    bottom: 20px;
+    right: 30px;
+  }
 }
