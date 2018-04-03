@@ -246,8 +246,8 @@ a.title:hover{
 		line-height:62pt;
 	}
 	p{
-		font-size:20pt;
-		line-height:1.2;
+		font-size:15pt;
+		line-height:1.1;
 	}
 	p.main-description{
 		font-size:15pt;
@@ -259,7 +259,7 @@ a.title:hover{
 		font-size:15pt;
 	}
 	#type{
-		font-size:20pt;
+		font-size:15pt;
 		letter-spacing: 0;
 		display:block;
 	}
