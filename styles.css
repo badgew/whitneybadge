@@ -235,8 +235,8 @@ a.title:hover{
 	body{
 		padding-left:30px;
 		padding-right:30px;
-		padding-top:30px;
-		margin-bottom:30px;
+		padding-top:50px;
+		margin-bottom:50px;
 	}
 	.title{
 		font-size:50pt;
@@ -247,7 +247,7 @@ a.title:hover{
 	}
 	p{
 		font-size:20pt;
-		line-height:1.1;
+		line-height:1.2;
 	}
 	p.main-description{
 		font-size:15pt;
@@ -271,7 +271,7 @@ a.title:hover{
   		width: 0;
   		bottom: 0px;
   		background: #000;
-  		height: 3px;
+  		height: 2px;
   		transition-property: width;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
@@ -296,7 +296,7 @@ a.title:hover{
 	}
 	p{
 		font-size:30pt;
-		line-height:1.1;
+		line-height:1.2;
 	}
 	p.main-description{
 		font-size:15pt;

@@ -71,31 +71,31 @@ li.intro.type{
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .work {
-    bottom: 25px;
+    bottom: 30px;
     left: 40px;
   }
   .contact{
     right: 40px;
-    bottom: 25px;
+    bottom: 30px;
   }
   .page{
     right: 40px;
-    bottom: 25px;
+    bottom: 30px;
   }
   .container .name {
-    top: 25px;
+    top: 30px;
     left: 40px; 
   }
   .container .type {
-    top: 25px;
+    top: 30px;
     right: 40px;
   }
   .container .work {
-    bottom: 25px;
+    bottom: 30px;
     left: 40px; 
   }
   .container .contact {
-    bottom: 25px;
+    bottom: 30px;
     right: 40px;
   }
 }
