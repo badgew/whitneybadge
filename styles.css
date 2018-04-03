@@ -246,20 +246,20 @@ a.title:hover{
 		line-height:62pt;
 	}
 	p{
-		font-size:16pt;
+		font-size:20pt;
 		line-height:1.1;
 	}
 	p.main-description{
-		font-size:12pt;
+		font-size:15pt;
 	}
 	p.description{
-		font-size:12pt;
+		font-size:15pt;
 	}
 	h3{
-		font-size:12pt;
+		font-size:15pt;
 	}
 	#type{
-		font-size:15pt;
+		font-size:20pt;
 		letter-spacing: 0;
 		display:block;
 	}
