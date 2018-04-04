@@ -133,6 +133,12 @@ a.title:hover{
 	text-decoration:none;
 }
 
+.subdomain-link{
+	font-size:45pt;
+	letter-spacing:-.5pt;
+	font-weight:bold;
+}
+
 /* Large and up */
 @media screen and (min-width: 64em) {
 	#type{
