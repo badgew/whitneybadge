@@ -14,12 +14,6 @@
     src: url("assets/fonts/GT-America-Standard-Medium.otf") format("opentype");
 }
 
-@font-face {
-    font-family: GT-America-Standard-Medium;
-    font-weight: normal;
-    src: url("assets/fonts/GT-America-Standard-Medium.otf") format("opentype");
-}
-
 body{
 	background-color:white;
 	color: black;
@@ -58,7 +52,7 @@ ol.content, .content ol{
 
 p{
 	font-size:45pt;
-	line-height:47pt;
+	line-height:49pt;
 	letter-spacing:-.5pt;
 	font-weight:bold;
 }
