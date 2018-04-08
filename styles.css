@@ -115,7 +115,6 @@ a.title:hover:before{
 a.title:hover{
 	color:white;
 	cursor:default;
-	background-color:black;
 }
 .project-title{
 	font-size:100pt;
