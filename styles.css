@@ -132,12 +132,17 @@ a.title:hover{
     line-height:1.15;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom:50px;
     float: right;
     padding: 20px;
     background-color: #FFDD2E;
     height: 250px;
     width: 250px;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+}
+
+a.subdomain-link:hover{
+	box-shadow:5px 5px 10px 4px rgba(0,0,0,0.1);
 }
 
 /* Large and up */
