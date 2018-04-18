@@ -214,6 +214,11 @@ a.thesis-subdomain:hover{
     position:absolute;
 }
 
+video{
+	width:425px;
+	height:auto;
+}
+
 .letters{
 	padding:0;
 }
@@ -258,12 +263,19 @@ a.thesis-subdomain:hover{
 		padding-top:50px;
 		margin-bottom:50px;
 	}
+
+	video{
+		width:350px;
+		height:auto;
+	}
+
 	.title{
 		font-size:50pt;
+		letter-spacing:-.5pt;
 	}
 	.project-title{
 		font-size:50pt;
-		line-height:62pt;
+		line-height:60pt;
 	}
 	p{
 		font-size:16pt;
