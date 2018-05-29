@@ -14,6 +14,11 @@
     src: url("assets/fonts/GT-America-Standard-Medium.otf") format("opentype");
 }
 
+@font-face {
+    font-family: Skrimshaw-Modern;
+    src: url("assets/fonts/Skrimshaw-Modern.otf") format("opentype");
+}
+
 body{
 	background-color:white;
 	color: black;
@@ -73,6 +78,16 @@ p.description{
 	margin-left:0;
 }
 
+p.skrimshaw-description{
+	font-size:15pt;
+	line-height:1.25;
+	font-weight:normal;
+	letter-spacing:.1pt;
+	font-family:Skrimshaw-Modern;
+	margin-right:0;
+	margin-left:0;
+}
+
 a{
 	cursor:default;
 	text-decoration:none;
@@ -124,6 +139,30 @@ a.title:hover{
 	font-weight:bolder;
 	display:inline-block;
 	text-decoration:none;
+}
+
+.skrimshaw-title{
+	font-size:100pt;
+	line-height:1;
+	font-family:Skrimshaw-Modern;
+	letter-spacing:-1pt;
+	padding-top:10px;
+	padding-bottom:20px;
+	display:inline-block;
+	text-decoration:none;
+}
+
+.skrimshaw-heading{
+	font-size:100pt;
+	line-height:1.1;
+	font-family:Skrimshaw-Modern;
+	padding-top:50px;
+	padding-bottom:50px;
+	letter-spacing:-2px;
+	padding-bottom:20px;
+	display:inline-block;
+	text-decoration:none;
+	color:#915B25;
 }
 
 .geo-subdomain{
@@ -223,6 +262,55 @@ video{
 	padding:0;
 }
 
+input#typetest-full{
+	font-size:100pt;
+	font-family:Skrimshaw-Modern;
+	width:100%;
+	height:auto;
+	border:none;
+	color:#915B25;
+	background-color:#D4D4D2;
+	padding:25px;
+	padding-bottom:0px;
+	margin-bottom:5px;
+}
+
+input#typetest-half{
+	font-size:50pt;
+	font-family:Skrimshaw-Modern;
+	width:100%;
+	height:auto;
+	border:none;
+	color:#915B25;
+	background-color:#D4D4D2;
+	padding:25px;
+	padding-bottom:10px;
+	margin-bottom:25px;
+}
+
+input::-webkit-input-placeholder {
+color: white;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: white;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: white;
+}
+
+input:-ms-input-placeholder {
+color: white;
+}
+
+.skrimshaw-letters{
+	font-family:Skrimshaw-Modern;
+	font-size:50pt;
+	font-weight:100;
+	line-height:1.3;
+
+}
 
 /*home page underline situation*/
 
@@ -366,14 +454,6 @@ video{
     top: 0;
     left: 0;
     background-color:white;
-/*    background: rgba(0,0,255,0);
-    background: -moz-linear-gradient(bottom, rgba(255,255,255,0) 0%, white 100%);
-    background: -webkit-gradient(left bottom, left top, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, white));
-    background: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, white 100%);
-    background: -o-linear-gradient(bottom, rgba(255,255,255,0) 0%, white 100%);
-    background: -ms-linear-gradient(bottom, rgba(255,255,255,0) 0%, white 100%);
-    background: linear-gradient(to top, rgba(255,255,255,0) 0%, white 100%);
-    pointer-events: none;*/
 }
 
 .fade-bottom{
@@ -383,12 +463,4 @@ video{
     bottom: 0;
     left: 0;
     background-color:white;
-/*    background: rgba(0,0,255,0);
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, white 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, white));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, white 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, white 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, white 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, white 100%);
-    pointer-events: none;*/
 }

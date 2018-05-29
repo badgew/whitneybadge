@@ -19,3 +19,12 @@ $("body").mouseover(function(e) {
         }
 
    }); //End mouseover()
+
+var typetest = new Typed('#typetest', {
+  strings: ['Mother of Pearl','Witch of the Wave','Cape of Good Hope','Stone Fleet'],
+    typeSpeed: 60,
+    backSpeed: 60,
+    attr: 'placeholder',
+    bindInputFocusEvents: true,
+    loop: true
+});
