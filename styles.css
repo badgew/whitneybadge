@@ -64,7 +64,7 @@ p{
 p.main-description{
 	font-size:15pt;
 	line-height:1.25;
-	font-weight:normal;
+	font-weight:100;
 	margin-right:0;
 	margin-left:0;
 }
@@ -73,7 +73,7 @@ p.description{
 	line-height:1.1;
 	margin-top:0;
 	margin-bottom:0;
-	font-weight:normal;
+	font-weight:100;
 	margin-right:0;
 	margin-left:0;
 }
@@ -81,7 +81,7 @@ p.description{
 p.skrimshaw-description{
 	font-size:15pt;
 	line-height:1.25;
-	font-weight:normal;
+	font-weight:100;
 	letter-spacing:.1pt;
 	font-family:Skrimshaw-Modern;
 	margin-right:0;
@@ -120,7 +120,7 @@ a.title:hover:before{
 	letter-spacing:-1pt;
 	padding-top:10px;
 	padding-bottom:20px;
-	font-weight:bolder;
+	font-weight:800;
 	display:inline-block;
 	text-decoration:none;
 }
@@ -171,13 +171,14 @@ a.title:hover{
     line-height:1.15;
     font-weight: bold;
     margin-top: 10px;
+    cursor:pointer;
 }
 
 .thesis-subdomain{
 	font-size: 45px;
     letter-spacing: -.25pt;
     line-height:1.15;
-    font-weight: bold;
+    font-weight: 800;
     margin-top: 20px;
     margin-bottom:50px;
     float: right;
@@ -186,6 +187,7 @@ a.title:hover{
     height: 250px;
     width: 250px;
     box-shadow: 0 0 10px 2px rgba(255,221,46,0.5);
+    cursor:pointer;
 }
 
 a.thesis-subdomain:hover{
