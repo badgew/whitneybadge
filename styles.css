@@ -383,6 +383,9 @@ color: white;
 		letter-spacing: 0;
 		display:block;
 	}
+	#tab-about p{
+		font-size:30px;
+	}
 	.underline:after {
   		content: "";
   		position: absolute;
