@@ -185,11 +185,11 @@ a.title:hover{
     background-color: #FFDD2E;
     height: 250px;
     width: 250px;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 2px rgba(255,221,46,0.5);
 }
 
 a.thesis-subdomain:hover{
-	box-shadow:5px 5px 10px 4px rgba(0,0,0,0.1);
+	box-shadow:5px 5px 10px 1px rgba(255,221,46,0.5);
 }
 
 /* Large and up */
@@ -358,28 +358,28 @@ color: white;
 	}
 
 	.title{
-		font-size:50pt;
+		font-size:60px;
 		letter-spacing:-.5pt;
 	}
 	.project-title{
-		font-size:50pt;
-		line-height:60pt;
+		font-size:60px;
+		line-height:70px;
 	}
 	p{
-		font-size:16pt;
-		line-height:1.1;
+		font-size:18px;
+		line-height:1.2;
 	}
 	p.main-description{
-		font-size:16pt;
+		font-size:18px;
 	}
 	p.description{
-		font-size:16pt;
+		font-size:18px;
 	}
 	h3{
-		font-size:16pt;
+		font-size:18px;
 	}
 	#type{
-		font-size:16pt;
+		font-size:18px;
 		letter-spacing: 0;
 		display:block;
 	}
