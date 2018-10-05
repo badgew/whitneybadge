@@ -57,8 +57,8 @@ ol.content, .content ol{
 
 p{
 	font-size:40pt;
-	line-height:45pt;
-	letter-spacing:-.75pt;
+	line-height:42pt;
+	letter-spacing:-.5pt;
 /*	font-weight:bold;
 */}
 p.main-description{
@@ -301,7 +301,7 @@ color: white;
 	}
 	p{
 		font-size:18px;
-		line-height:1.2;
+		line-height:1.1;
 	}
 	p.main-description{
 		font-size:18px;
@@ -320,7 +320,7 @@ color: white;
 	#tab-about p{
 		font-size:22px;
 	}
-	.underline:after {
+	.underline:before {
   		content: "";
   		position: absolute;
   		z-index: -1;
@@ -353,7 +353,7 @@ color: white;
 	}
 	p{
 		font-size:30pt;
-		line-height:1.2;
+		line-height:1.1;
 	}
 	p.main-description{
 		font-size:15pt;
