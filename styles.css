@@ -317,6 +317,7 @@ color: white;
 	#type{
 		font-size:18px;
 		letter-spacing: 0;
+		margin-top:10px;
 		display:block;
 	}
 	#tab-about p{
