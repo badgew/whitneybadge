@@ -12,12 +12,7 @@
 @font-face {
     font-family: GT-America-Standard-Medium;
     src: url("assets/fonts/GT-America-Standard-Medium.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Skrimshaw-Modern;
-    src: url("assets/fonts/Skrimshaw-Modern.otf") format("opentype");
-}
+} 
 
 body{
 	background-color:white;
@@ -128,7 +123,7 @@ a.title:hover{
 	line-height:125pt;
 	letter-spacing:-1pt;
 	padding-top:10px;
-	font-weight:bolder;
+/*	font-weight:bolder;*/
 	display:inline-block;
 	text-decoration:none;
 }
