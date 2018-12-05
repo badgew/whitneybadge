@@ -302,7 +302,7 @@ color: white;
 
 	.title{
 		font-size:60px;
-		letter-spacing:-.5pt;
+		letter-spacing:-1;
 	}
 	.project-title{
 		font-size:60px;
@@ -327,6 +327,17 @@ color: white;
 		margin-top:10px;
 		display:block;
 	}
+
+	a.title:hover:before{
+	background-color: rgb(255, 255, 255);
+	}
+	.title:hover span#type {
+/*	  display: inline-block;
+*/	}
+	a.title:hover{
+		color:black;
+	}
+
 	#tab-about p{
 		font-size:22px;
 	}

@@ -135,4 +135,8 @@ li.intro.type{
     bottom: 15px;
     right: 30px;
   }
+
+  .content:not(.static) > li:hover ~ .container li a {
+  color: black; 
+}
 }
