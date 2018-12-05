@@ -332,8 +332,8 @@ color: white;
 	background-color: rgb(255, 255, 255);
 	}
 	.title:hover span#type {
-/*	  display: inline-block;
-*/	}
+	  display: inline-block;
+	}
 	a.title:hover{
 		color:black;
 	}
