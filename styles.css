@@ -112,7 +112,7 @@ a.title:hover:before{
 	display:inline-block;
 	text-decoration:none;
 }
-.title:hover span#type {
+.title:hover span.project-type {
   display: inline-block;
 }
 
@@ -164,13 +164,13 @@ a.thesis-subdomain:hover{
 
 /* Large and up */
 @media screen and (min-width: 64em) {
-	#type{
+	.project-type{
 		font-size:15pt;
 		letter-spacing: 0;
 		position:fixed;
 		right:0px;
 	}
-	span#type{
+	span.project-type{
 		display:none;
 		position:absolute;
 		margin-top:-30px;
@@ -198,6 +198,7 @@ a.thesis-subdomain:hover{
 	font-style:normal;
 	cursor:default;
 }
+
 .intro a:hover{
 	text-decoration:underline;
 }
@@ -267,7 +268,7 @@ color: white;
   position: absolute;
   z-index: -1;
   right: 0;
-  width: 0;
+  width: 100%;
   bottom: 2px;
   background: #000;
   height: 4px;
@@ -275,13 +276,13 @@ color: white;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-.underline:hover:after,
+/*.underline:hover:after,
 .underline:focus:after,
 .underline:active:after {
   left: 0;
   right: auto;
-  width: 100%;
-}
+  width: 0;
+}*/
 
 
 /* responsive scaling */
@@ -321,7 +322,7 @@ color: white;
 	h3{
 		font-size:18px;
 	}
-	#type{
+	.project-type{
 		font-size:18px;
 		letter-spacing: 0;
 		margin-top:10px;
@@ -331,8 +332,8 @@ color: white;
 	a.title:hover:before{
 	background-color: rgb(255, 255, 255);
 	}
-	.title:hover span#type {
-	  display: inline-block;
+	.title:hover span.project-type {
+	  display: block;
 	}
 	a.title:hover{
 		color:black;
@@ -346,10 +347,10 @@ color: white;
   		position: absolute;
   		z-index: -1;
   		right: 0;
-  		width: 0;
+  		width: 100%;
   		bottom: 0px;
   		background: #000;
-  		height: 2px;
+  		height: 1px;
   		transition-property: width;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
@@ -372,6 +373,11 @@ color: white;
 	.project-title{
 		font-size:75pt;
 	}
+
+	.title:hover span.project-type {
+	  display: block;
+	}
+	
 	p{
 		font-size:30pt;
 		line-height:1.1;
@@ -385,7 +391,7 @@ color: white;
 	h3{
 		font-size:15pt;
 	}
-	#type{
+	.project-type{
 		font-size:15pt;
 		display:block;
 		letter-spacing: 0;
@@ -395,7 +401,7 @@ color: white;
   		position: absolute;
   		z-index: -1;
   		right: 0;
-  		width: 0;
+  		width: 100%;
   		bottom: 1px;
   		background: #000;
   		height: 4px;
