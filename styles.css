@@ -10,9 +10,15 @@
 }
 
 @font-face {
-    font-family: GT-America-Standard-Medium;
-    src: url("assets/fonts/GT-America-Standard-Medium.otf") format("opentype");
-} 
+    font-family: FoundersGrotesk-Regular;
+    src: url("assets/fonts/GFoundersGrotesk-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: FoundersGrotesk-Regular;
+    font-weight: normal;
+    src: url("assets/fonts/FoundersGrotesk-Regular.otf") format("opentype");
+}
 
 body{
 	background-color:white;
@@ -20,7 +26,7 @@ body{
 	padding-left:50px;
 	padding-right:50px;
 	cursor:default;
-	font-family:GT-America-Standard-Regular;
+	font-family:FoundersGrotesk-Regular;
 	position:relative;
 	width:100vw;
 	height:100%;
@@ -35,17 +41,13 @@ body{
 	margin-right: -0.9375rem;
 }
 
-.footer{
-	background-color:grey;
-	width:100%;
-	height:auto;
-}
 .content{
 	width:100%;
 	float:right;
 	overflow: scroll;
 	color: black;
 }
+
 ol.content, .content ol{
 	list-style:none;
 	margin:0;
@@ -59,10 +61,10 @@ ol.content, .content ol{
 p{
 	font-size:40pt;
 	line-height:44pt;
-	letter-spacing:-.5pt;
+	/*letter-spacing:.25pt;*/
 	margin-top:20px;
 	margin-bottom:20px;
-	font-weight:bold;
+	/*font-weight:bold;*/
 }
 p.main-description{
 	font-size:15pt;
@@ -74,6 +76,7 @@ p.main-description{
 p.description{
 	font-size:15pt;
 	line-height:1.1;
+	letter-spacing:.25pt;
 	margin-top:0;
 	margin-bottom:0;
 	font-weight:100;
@@ -110,11 +113,9 @@ a.title:hover:before{
 }
 .title{
 	font-size:100pt;
-	line-height:1;
+	line-height:.8;
 	letter-spacing:-1pt;
-	padding-top:10px;
-	padding-bottom:20px;
-	font-weight:800;
+	padding-top:50px;
 	display:inline-block;
 	text-decoration:none;
 }
@@ -162,17 +163,13 @@ a.title:hover{
     width: 250px;
     box-shadow: 0 0 10px 2px rgba(255,221,46,0.5);
     cursor:pointer;
-}
-
-a.thesis-subdomain:hover{
-	box-shadow:5px 5px 10px 1px rgba(255,221,46,0.5);
-}
+} 
 
 /* Large and up */
 @media screen and (min-width: 64em) {
 	.project-type{
 		font-size:15pt;
-		letter-spacing: 0;
+		letter-spacing: .5pt;
 		position:fixed;
 		right:0px;
 	}
@@ -267,6 +264,7 @@ color: white;
 .underline {
   display: inline;
   position: relative;
+  cursor:e-resize;
   overflow: hidden;
 }
 .underline:after {
@@ -275,12 +273,12 @@ color: white;
   z-index: -1;
   right: 0;
   width: 100%;
-  bottom: 2px;
+  bottom: 10px;
   background: #000;
   height: 4px;
-  transition-property: width;
+/*  transition-property: width;
   transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-out;*/
 }
 /*.underline:hover:after,
 .underline:focus:after,
@@ -348,15 +346,15 @@ color: white;
 	#tab-about p{
 		font-size:22px;
 	}
-	.underline:before {
+	.underline:after {
   		content: "";
   		position: absolute;
   		z-index: -1;
   		right: 0;
   		width: 100%;
-  		bottom: 0px;
+  		bottom: 3px;
   		background: #000;
-  		height: 1px;
+  		height: 2px;
   		transition-property: width;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
@@ -408,7 +406,7 @@ color: white;
   		z-index: -1;
   		right: 0;
   		width: 100%;
-  		bottom: 1px;
+  		bottom: 6px;
   		background: #000;
   		height: 4px;
   		transition-property: width;
