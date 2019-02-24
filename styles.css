@@ -34,6 +34,12 @@ body{
 	margin-left: -0.9375rem;
 	margin-right: -0.9375rem;
 }
+
+.footer{
+	background-color:grey;
+	width:100%;
+	height:auto;
+}
 .content{
 	width:100%;
 	float:right;
@@ -121,7 +127,7 @@ a.title:hover:before{
 }
 a.title:hover{
 	color:white;
-	cursor:default;
+	cursor:e-resize;
 }
 .project-title{
 	font-size:100pt;
@@ -377,7 +383,7 @@ color: white;
 	.title:hover span.project-type {
 	  display: block;
 	}
-	
+
 	p{
 		font-size:30pt;
 		line-height:1.1;
