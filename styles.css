@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: GT-America-Standard-Regular;
     src: url("assets/fonts/GT-America-Standard-Regular.otf") format("opentype");
 }
@@ -7,7 +7,7 @@
     font-family: GT-America-Standard-Regular;
     font-weight: normal;
     src: url("assets/fonts/GT-America-Standard-Regular.otf") format("opentype");
-}
+}*/
 
 @font-face {
     font-family: FoundersGrotesk-Regular;
@@ -67,14 +67,14 @@ p{
 	/*font-weight:bold;*/
 }
 p.main-description{
-	font-size:15pt;
+	font-size:16pt;
 	line-height:1.25;
 	font-weight:100;
 	margin-right:0;
 	margin-left:0;
 }
 p.description{
-	font-size:15pt;
+	font-size:16pt;
 	line-height:1.1;
 	letter-spacing:.25pt;
 	margin-top:0;
@@ -112,10 +112,10 @@ a.title:hover:before{
 	background-color: rgb(0, 0, 0);
 }
 .title{
-	font-size:100pt;
+	font-size:105pt;
 	line-height:.8;
 	letter-spacing:-1pt;
-	padding-top:50px;
+	padding-top:40px;
 	display:inline-block;
 	text-decoration:none;
 }
@@ -142,11 +142,10 @@ a.title:hover{
 
 .geo-subdomain{
 	font-size: 45px;
-    letter-spacing: -.25pt;
     line-height:1.15;
     font-weight: bold;
     margin-top: 10px;
-    cursor:pointer;
+    cursor:e-resize;
 }
 
 .thesis-subdomain{
@@ -168,7 +167,7 @@ a.title:hover{
 /* Large and up */
 @media screen and (min-width: 64em) {
 	.project-type{
-		font-size:15pt;
+		font-size:16pt;
 		letter-spacing: .5pt;
 		position:fixed;
 		right:0px;
@@ -188,14 +187,14 @@ a.title:hover{
 }
 
 .type{
-	font-size:15pt;
+	font-size:16pt;
 	list-style-type:none;
 	position:relative;
 	margin-top:7vh;
 	margin-bottom:7vh;
 }
 .intro{
-	font-size:15pt;
+	font-size:16pt;
 	list-style-type:none;
 	color:black;
 	font-style:normal;
@@ -314,20 +313,20 @@ color: white;
 		line-height:70px;
 	}
 	p{
-		font-size:18px;
+		font-size:16pt;
 		line-height:1.1;
 	}
 	p.main-description{
-		font-size:18px;
+		font-size:16pt;
 	}
 	p.description{
-		font-size:18px;
+		font-size:16pt;
 	}
 	h3{
-		font-size:18px;
+		font-size:16pt;
 	}
 	.project-type{
-		font-size:18px;
+		font-size:16pt;
 		letter-spacing: 0;
 		margin-top:10px;
 		display:block;
@@ -387,16 +386,16 @@ color: white;
 		line-height:1.1;
 	}
 	p.main-description{
-		font-size:15pt;
+		font-size:16pt;
 	}
 	p.description{
-		font-size:15pt;
+		font-size:16pt;
 	}
 	h3{
-		font-size:15pt;
+		font-size:16pt;
 	}
 	.project-type{
-		font-size:15pt;
+		font-size:16pt;
 		display:block;
 		letter-spacing: 0;
 	}
