@@ -416,7 +416,7 @@ color: white;
 
 /* Large desktop screen */
 
-@media screen and (min-width: 87.5em) and (max-width: 118.75em) {
+/*@media screen and (min-width: 87.5em) and (max-width: 118.75em) {
 	body{
 		padding-left:80px;
 		padding-right:80px;
@@ -465,7 +465,7 @@ color: white;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
 	}
-}
+}*/
 
 .fade-top{
 	position: fixed;
