@@ -113,7 +113,7 @@ a.title:hover:before{
 }
 .title{
 	font-size:105pt;
-	line-height:.8;
+	line-height:.75;
 	letter-spacing:-1pt;
 	padding-top:40px;
 	display:inline-block;
