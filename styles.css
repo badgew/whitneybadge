@@ -21,8 +21,8 @@
 }
 
 body{
-	background-color:white;
-	color: black;
+	background-color:black;
+	color: white;
 	padding-left:50px;
 	padding-right:50px;
 	cursor:default;
@@ -34,6 +34,11 @@ body{
 	padding-top:50px;
 	margin:0;
 	margin-bottom:100px;
+}
+
+body.main{
+	background-color:white;
+	color:black;
 }
 
 .row.expanded{
@@ -113,12 +118,18 @@ a.title:hover:before{
 }
 .title{
 	font-size:105pt;
+	color:white;
 	line-height:.75;
 	letter-spacing:-1pt;
 	padding-top:40px;
 	display:inline-block;
 	text-decoration:none;
 }
+
+.title.main{
+	color:black;
+}
+
 .title:hover span.project-type {
   display: inline-block;
 }
@@ -143,9 +154,9 @@ a.title:hover{
 .geo-subdomain{
 	font-size: 45px;
     line-height:1.15;
-    font-weight: bold;
     margin-top: 10px;
     cursor:e-resize;
+    color:white;
 }
 
 .thesis-subdomain{
@@ -193,10 +204,18 @@ a.title:hover{
 	margin-top:7vh;
 	margin-bottom:7vh;
 }
-.intro{
+.intro.main a{
 	font-size:16pt;
 	list-style-type:none;
 	color:black;
+	font-style:normal;
+	cursor:default;
+}
+
+.intro a{
+	font-size:16pt;
+	list-style-type:none;
+	color:white;
 	font-style:normal;
 	cursor:default;
 }
@@ -473,7 +492,7 @@ color: white;
     height: 7%;
     top: 0;
     left: 0;
-    background-color:white;
+    background-color:black;
 }
 
 .fade-bottom{
@@ -482,5 +501,5 @@ color: white;
     height: 7%;
     bottom: 0;
     left: 0;
-    background-color:white;
+    background-color:black;
 }
