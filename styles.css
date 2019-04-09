@@ -294,17 +294,7 @@ color: white;
   bottom: 10px;
   background: #000;
   height: 4px;
-/*  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;*/
 }
-/*.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
-  left: 0;
-  right: auto;
-  width: 0;
-}*/
 
 
 /* responsive scaling */
