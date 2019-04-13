@@ -284,6 +284,7 @@ color: white;
   position: relative;
   cursor:e-resize;
   overflow: hidden;
+  z-index:-1;
 }
 .underline:after {
   content: "";
@@ -493,3 +494,20 @@ color: white;
     left: 0;
     background-color:black;
 }
+
+.fade-top.white{
+    background-color:white;
+}
+
+.fade-bottom.white{
+    background-color:white;
+}
+
+.title:hover div.fade-top.white{
+    background-color:black;
+}
+
+.title:hover div.fade-bottom.white{
+    background-color:black;
+}
+
