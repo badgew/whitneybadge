@@ -36,6 +36,15 @@ body{
 	margin-bottom:100px;
 }
 
+.border{ 
+	border-width: .1px; 
+	border-color: grey; 
+	border-style: solid; 
+	margin-bottom:30px;
+
+}
+
+
 body.main{
 	background-color:white;
 	color:black;
