@@ -1,6 +1,6 @@
 .type {
-  right: 100px;
-  top: 0px;
+  right: 40px;
+  top: 40px;
   position:absolute;
 }
 li.intro.type{
@@ -8,18 +8,18 @@ li.intro.type{
   padding:0;
 }
 .work {
-  bottom: 20px;
-  left: 50px;
+  bottom: 40px;
+  left: 40px;
 }
 
 .contact{
-  right: 50px;
-  bottom: 20px;
+  right: 40px;
+  top: 40px;
 }
 
 .page{
-  right: 50px;
-  bottom: 20px;
+  right: 40px;
+  bottom: 40px;
 }
 .content{
   position:relative;
@@ -75,54 +75,59 @@ li.intro.type{
 }
   
 .container .name {
-  top: 20px;
-  left: 50px; 
+  top: 40px;
+  left: 40px; 
+  bottom: 40px;
 }
 
 .container .type {
-  top: 20px;
-  right: 50px;
+  top: 40px;
+  right: 40px;
+  bottom: 40px;
 }
 
 .container .work {
-  bottom: 20px;
-  left: 50px; 
+  bottom: 40px;
+  left: 40px; 
+  bottom: 40px;
 }
 
 .container .contact {
-  bottom: 20px;
-  right: 50px;
+  bottom: 40px;
+  right: 40px;
+  bottom: 40px;
+
 }
 
 /* Medium only */
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .work {
-    bottom: 20px;
+    bottom: 40px;
     left: 40px;
   }
   .contact{
     right: 40px;
-    bottom: 20px;
+    bottom: 40px;
   }
   .page{
     right: 40px;
-    bottom: 20px;
+    bottom: 40px;
   }
   .container .name {
-    top: 20px;
+    top: 40px;
     left: 40px; 
   }
   .container .type {
-    top: 20px;
+    top: 40px;
     right: 40px;
   }
   .container .work {
-    bottom: 20px;
+    bottom: 40px;
     left: 40px; 
   }
   .container .contact {
-    bottom: 20px;
+    bottom: 40px;
     right: 40px;
   }
 }
@@ -133,32 +138,32 @@ li.intro.type{
 
 @media screen and (max-width: 39.9375em) {
   .work {
-    bottom: 15px;
-    left: 30px;
+    bottom: 20px;
+    left: 20px;
   }
   .contact{
-    right: 30px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
   }
   .page{
-    right: 30px;
-    bottom: 15px;
+    right: 20px;
+    bottom: 20px;
   }
   .container .name {
-    top: 15px;
-    left: 30px; 
+    top: 20px;
+    left: 20px; 
   }
   .container .type {
-    top: 15px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
   }
   .container .work {
-    bottom: 15px;
-    left: 30px; 
+    bottom: 20px;
+    left: 20px; 
   }
   .container .contact {
-    bottom: 15px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
   }
 
   .content:not(.static) > li:hover ~ .container li a {

@@ -22,16 +22,16 @@
 
 body{
 	background-color:black;
-	color: white;
-	padding-left:50px;
-	padding-right:50px;
+	color: #FBFBFB;
+	padding-left:40px;
+	padding-right:40px;
 	cursor:default;
 	font-family:FoundersGrotesk-Regular;
 	position:relative;
 	width:100vw;
 	height:100%;
 	display:block;
-	padding-top:50px;
+	padding-top:40px;
 	margin:0;
 	margin-bottom:100px;
 }
@@ -41,12 +41,11 @@ body{
 	border-color: grey; 
 	border-style: solid; 
 	margin-bottom:30px;
-
 }
 
 
 body.main{
-	background-color:white;
+	background-color: #FBFBFB;
 	color:black;
 }
 
@@ -64,7 +63,6 @@ body.main{
 
 ol.content, .content ol{
 	list-style:none;
-	margin:0;
 	padding:0;
 }
 *{
@@ -73,22 +71,20 @@ ol.content, .content ol{
 }
 
 p{
-	font-size:50pt;
-	line-height:51pt;
-	/*letter-spacing:.25pt;*/
+	font-size:40pt;
+	line-height:42pt;
 	margin-top:20px;
 	margin-bottom:20px;
-	/*font-weight:bold;*/
 }
 p.main-description{
-	font-size:16pt;
+	font-size:20pt;
 	line-height:1.25;
 	font-weight:100;
 	margin-right:0;
 	margin-left:0;
 }
 p.description{
-	font-size:16pt;
+	font-size:20pt;
 	line-height:1.1;
 	letter-spacing:.25pt;
 	margin-top:0;
@@ -101,12 +97,13 @@ p.description{
 a{
 	cursor:default;
 	text-decoration:none;
-	color:black;
-	display:inherit;
+/*	color:black;
+*/	display:inherit;
 	line-height:100%;
 }
+
 h3{
-	margin-top:20px;
+	margin-top:20pt;
 	margin-bottom:10px;
 	line-height:1.1;
 }
@@ -123,20 +120,21 @@ a.title:before{
 	background-color:transparent;
 }
 a.title:hover:before{
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(251, 251, 251);
 }
 .title{
-	font-size:105pt;
+	font-size:40pt;
 	color:white;
-	line-height:.75;
-	letter-spacing:-1pt;
-	padding-top:40px;
+	line-height:42pt;
 	display:inline-block;
 	text-decoration:none;
+	margin-top:20px;
 }
 
 .title.main{
 	color:black;
+	touch-action: none;
+	margin-top:0px;
 }
 
 .title:hover span.project-type {
@@ -147,31 +145,21 @@ a.title:hover:before{
   display: inline-block;
 }
 a.title:hover{
-	color:white;
+	color:black;
 	cursor:e-resize;
 }
 .project-title{
-	font-size:100pt;
-	line-height:125pt;
+	font-size:80pt;
+	line-height:90pt;
 	letter-spacing:-1pt;
 	padding-top:10px;
-/*	font-weight:bolder;*/
 	display:inline-block;
 	text-decoration:none;
 }
 
-.geo-subdomain{
-	font-size: 45px;
-    line-height:1.15;
-    margin-top: 10px;
-    cursor:e-resize;
-    color:white;
-}
-
 .thesis-subdomain{
-	font-size: 45px;
-    letter-spacing: -.25pt;
-    line-height:1.15;
+	font-size: 40px;
+    line-height:1.1;
     font-weight: 800;
     margin-top: 20px;
     margin-bottom:50px;
@@ -184,10 +172,30 @@ a.title:hover{
     cursor:pointer;
 } 
 
+.fade-black{
+	position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    left: 0;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(251,251,251,0) 100%);
+}
+
+.fade-white{
+	position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    left: 0;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(251,251,251,1) 40%, rgba(0,0,0,0) 100%);
+}
+
 /* Large and up */
 @media screen and (min-width: 64em) {
 	.project-type{
-		font-size:16pt;
+		font-size:20pt;
 		letter-spacing: .5pt;
 		position:fixed;
 		right:0px;
@@ -195,7 +203,7 @@ a.title:hover{
 	span.project-type{
 		display:none;
 		position:absolute;
-		margin-top:-30px;
+		margin-top:-10px;
 	}
 
 	span#image{
@@ -207,22 +215,30 @@ a.title:hover{
 }
 
 .type{
-	font-size:16pt;
+	font-size:20pt;
 	list-style-type:none;
 	position:relative;
 	margin-top:7vh;
 	margin-bottom:7vh;
 }
 .intro.main a{
-	font-size:16pt;
+	font-size:20pt;
 	list-style-type:none;
 	color:black;
 	font-style:normal;
 	cursor:default;
 }
 
+.intro.project a{
+	font-size:20pt;
+	list-style-type:none;
+	color:white;
+	font-style:normal;
+	cursor:default;
+}
+
 .intro a{
-	font-size:16pt;
+	font-size:20pt;
 	list-style-type:none;
 	color:white;
 	font-style:normal;
@@ -324,35 +340,35 @@ color: white;
 	}
 
 	.title{
-		font-size:60px;
+		font-size:40px;
 		letter-spacing:-1;
 	}
 	.project-title{
-		font-size:60px;
-		line-height:70px;
+		font-size:40px;
+		line-height:42px;
 	}
 	p{
-		font-size:16pt;
+		font-size:20pt;
 		line-height:1.1;
 	}
 	p.main-description{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	p.description{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	h3{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	.project-type{
-		font-size:16pt;
+		font-size:20pt;
 		letter-spacing: 0;
 		margin-top:10px;
 		display:block;
 	}
 
 	a.title:hover:before{
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(251, 251, 251);
 	}
 	.title:hover span.project-type {
 	  display: block;
@@ -362,7 +378,7 @@ color: white;
 	}
 
 	#tab-about p{
-		font-size:22px;
+		font-size:16px;
 	}
 	.underline:after {
   		content: "";
@@ -390,10 +406,10 @@ color: white;
 		margin-bottom:40px;
 	}
 	.title{
-		font-size:75pt;
+		font-size:40pt;
 	}
 	.project-title{
-		font-size:75pt;
+		font-size:40pt;
 	}
 
 	.title:hover span.project-type {
@@ -401,20 +417,20 @@ color: white;
 	}
 
 	p{
-		font-size:30pt;
+		font-size:20pt;
 		line-height:1.1;
 	}
 	p.main-description{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	p.description{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	h3{
-		font-size:16pt;
+		font-size:20pt;
 	}
 	.project-type{
-		font-size:16pt;
+		font-size:20pt;
 		display:block;
 		letter-spacing: 0;
 	}
@@ -431,92 +447,5 @@ color: white;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
 	}
-}
-
-/* Large desktop screen */
-
-/*@media screen and (min-width: 87.5em) and (max-width: 118.75em) {
-	body{
-		padding-left:80px;
-		padding-right:80px;
-		padding-top:80px;
-		margin-bottom:80px;
-	}
-	.title{
-		font-size:180pt;
-	}
-	.project-title{
-		font-size:180pt;
-	}
-
-	.title:hover span.project-type {
-	  display: block;
-	}
-
-	p{
-		font-size:75pt;
-		line-height:1.1;
-	}
-	p.main-description{
-		font-size:40pt;
-	}
-	p.description{
-		font-size:40pt;
-	}
-	h3{
-		font-size:40pt;
-	}
-	.project-type{
-		font-size:40pt;
-		display:block;
-		letter-spacing: 0;
-	}
-	.underline:after {
-  		content: "";
-  		position: absolute;
-  		z-index: -1;
-  		right: 0;
-  		width: 100%;
-  		bottom: 20px;
-  		background: #000;
-  		height: 7px;
-  		transition-property: width;
-  		transition-duration: 0.5s;
-  		transition-timing-function: ease-out;
-	}
-}*/
-
-.fade-top{
-	position: fixed;
-    width: 100%;
-    height: 7%;
-    top: 0;
-    left: 0;
-    background-color:black;
-}
-
-.fade-bottom{
-	position: fixed;
-    width: 100%;
-    height: 7%;
-    bottom: 0;
-    left: 0;
-    background-color:black;
-}
-
-.fade-top.white{
-    background-color:white;
-}
-
-.fade-bottom.white{
-    background-color:white;
-}
-
-.title:hover div.fade-top.white{
-    background-color:black;
-}
-
-.title:hover div.fade-bottom.white{
-    background-color:black;
 }
 
