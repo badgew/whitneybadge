@@ -1,0 +1,185 @@
+.type {
+  right: 40px;
+  top: 40px;
+  position:absolute;
+}
+li.intro.type{
+  margin:0;
+  padding:0;
+}
+.work {
+  bottom: 40px;
+  left: 40px;
+}
+
+.index-body .contact{
+  position:relative;
+  right: initial;
+  top: 0;
+  z-index: 1;
+}
+
+.index-body .contact a{
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.contact{
+  right: 40px;
+  top: 40px;
+}
+
+.page{
+  right: 40px;
+  bottom: 40px;
+}
+.content{
+  position:relative;
+}
+.content:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.content > li{
+  float:left;
+  clear:both;
+}
+
+.content:not(.static) > li:hover ~ .container .intro.main.work a,
+.content:not(.static) > li:hover ~ .container .intro.main.name a {
+  position: relative;
+  z-index: 1;
+}
+
+.content:not(.static) > li:hover ~ .container .intro.main.work:before,
+.content:not(.static) > li:hover ~ .container .intro.main.name:before {
+  background:black;
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  left: 0;
+  content: "";
+  display: block;
+  z-index: -1;
+}
+
+.content:not(.static) > li:hover ~ .container .intro.main.name:before{
+  top: 0;
+}
+
+.content:not(.static) > li:hover ~ .container .intro.main.work:before{
+  bottom: 0;
+}
+
+.content:not(.static) > li:hover ~ .container li a {
+  color: white; 
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container li {
+  position: fixed; 
+}
+  
+.container .name {
+  top: 40px;
+  left: 40px; 
+  bottom: 40px;
+}
+
+.container .type {
+  top: 40px;
+  right: 40px;
+  bottom: 40px;
+}
+
+.container .work {
+  bottom: 40px;
+  left: 40px; 
+  bottom: 40px;
+}
+
+.container .contact {
+  bottom: 40px;
+  right: 40px;
+  bottom: 40px;
+
+}
+
+/* Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .work {
+    bottom: 40px;
+    left: 40px;
+  }
+  .contact{
+    right: 40px;
+    bottom: 40px;
+  }
+  .page{
+    right: 40px;
+    bottom: 40px;
+  }
+  .container .name {
+    top: 40px;
+    left: 40px; 
+  }
+  .container .type {
+    top: 40px;
+    right: 40px;
+  }
+  .container .work {
+    bottom: 40px;
+    left: 40px; 
+  }
+  .container .contact {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+
+/* responsive scaling */
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+  .work {
+    bottom: 20px;
+    left: 20px;
+  }
+  .contact{
+    right: 20px;
+    bottom: 20px;
+  }
+  .page{
+    right: 20px;
+    bottom: 20px;
+  }
+  .container .name {
+    top: 20px;
+    left: 20px; 
+  }
+  .container .type {
+    top: 20px;
+    right: 20px;
+  }
+  .container .work {
+    bottom: 20px;
+    left: 20px; 
+  }
+  .container .contact {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .content:not(.static) > li:hover ~ .container li a {
+  color: black; 
+}
+}
