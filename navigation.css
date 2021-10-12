@@ -134,11 +134,19 @@ li.intro.type{
     right: 40px;
     bottom: 40px;
   }
+  .home{
+    left: 40px;
+    top: 40px;
+  }
   .page{
     right: 40px;
     bottom: 40px;
   }
   .container .name {
+    top: 40px;
+    left: 40px; 
+  }
+ .container .home {
     top: 40px;
     left: 40px; 
   }
@@ -169,11 +177,19 @@ li.intro.type{
     right: 20px;
     bottom: 20px;
   }
+  .home{
+    left: 20px;
+    top: 20px;
+  }
   .page{
     right: 20px;
     bottom: 20px;
   }
   .container .name {
+    top: 20px;
+    left: 20px; 
+  }
+ .container .home {
     top: 20px;
     left: 20px; 
   }

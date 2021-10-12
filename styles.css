@@ -188,8 +188,8 @@ a.title:hover{
 .thumbnails{
 	max-height:calc(100vh - 60px);
 	overflow:scroll;
-/*	margin-top:20px;
-*/}
+	margin-top:20px;
+}
 
 .thumbnails img{
 	margin-top:20px;
@@ -247,6 +247,7 @@ a.title:hover{
 	color:white;
 	font-style:normal;
 	cursor:default;
+	padding:0px;
 }
 
 .intro a:hover{
@@ -382,6 +383,19 @@ color: white;
 		color:black;
 	}
 
+	a.intro.project.type{
+		margin:0;
+	}
+
+	a.intro.type{
+		margin:40;
+	}
+
+	.intro a{
+	padding:20px;
+	}
+
+
 	#tab-about p{
 		font-size:18px;
 	}
@@ -422,7 +436,7 @@ color: white;
 	}
 
 	p{
-		font-size:18pt;
+		font-size:40pt;
 		line-height:1.1;
 	}
 	p.main-description{
