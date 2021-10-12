@@ -23,6 +23,7 @@ li.intro.type{
   position:absolute;
   right:0;
   top:0;
+  padding:0;
 }
 
 .index-body .home a{
@@ -127,41 +128,47 @@ li.intro.type{
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .work {
-    bottom: 40px;
-    left: 40px;
+    bottom: 20px;
+    left: 20px;
   }
   .contact{
-    right: 40px;
-    bottom: 40px;
+    right: 20px;
+    bottom: 20px;
   }
   .home{
-    left: 40px;
-    top: 40px;
+    left: 20px;
+    top: 20px;
   }
   .page{
-    right: 40px;
-    bottom: 40px;
+    right: 20px;
+    bottom: 20px;
   }
   .container .name {
-    top: 40px;
-    left: 40px; 
+    top: 20px;
+    left: 20px; 
   }
  .container .home {
-    top: 40px;
-    left: 40px; 
+    top: 20px;
+    left: 20px; 
   }
   .container .type {
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
   }
   .container .work {
-    bottom: 40px;
-    left: 40px; 
+    bottom: 20px;
+    left: 20px; 
   }
   .container .contact {
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
   }
+}
+
+.index-body .home a{
+  position:absolute;
+  left:40px;
+  top:40px;
 }
 
 
@@ -180,6 +187,7 @@ li.intro.type{
   .home{
     left: 20px;
     top: 20px;
+    padding: 0px;
   }
   .page{
     right: 20px;
@@ -205,6 +213,16 @@ li.intro.type{
     bottom: 20px;
     right: 20px;
   }
+
+  .index-body .home a{
+  position:absolute;
+  left:10px;
+  top:20px;
+}
+
+.index-body .contact a{
+  top:-10px;
+}
 
   .content:not(.static) > li:hover ~ .container li a {
   color: black; 
