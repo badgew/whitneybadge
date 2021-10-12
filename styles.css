@@ -52,7 +52,8 @@ body.main{
 
 ol.content, .content ol{
 	list-style:none;
-	padding:0;
+	padding-top:30px;
+	padding-left:0px;
 }
 *{
     outline-color: transparent;
@@ -62,7 +63,7 @@ ol.content, .content ol{
 p{
 	font-size:40pt;
 	line-height:42pt;
-	margin-top:20px;
+	margin-top:40px;
 	margin-bottom:20px;
 }
 p.main-description{
@@ -124,6 +125,7 @@ a.title:hover:before{
 	color:black;
 	touch-action: none;
 	margin-top:0px;
+	line-height:1.05;
 }
 
 .title:hover span.project-type {
@@ -186,8 +188,8 @@ a.title:hover{
 .thumbnails{
 	max-height:calc(100vh - 60px);
 	overflow:scroll;
-	margin-top:20px;
-}
+/*	margin-top:20px;
+*/}
 
 .thumbnails img{
 	margin-top:20px;
@@ -228,6 +230,7 @@ a.title:hover{
 	color:black;
 	font-style:normal;
 	cursor:default;
+	position:absolute;
 }
 
 .intro.project a{
@@ -366,14 +369,14 @@ color: white;
 		line-height: 0.5;
 		letter-spacing: 0;
 		margin-bottom:20px;
-		display:block;
+		display:none;
 	}
 
 	a.title:hover:before{
 	background-color: rgb(251, 251, 251);
 	}
 	.title:hover span.project-type {
-	  display: block;
+	  display: none;
 	}
 	a.title:hover{
 		color:black;
@@ -415,7 +418,7 @@ color: white;
 	}
 
 	.title:hover span.project-type {
-	  display: block;
+	  display: none;
 	}
 
 	p{
@@ -435,7 +438,7 @@ color: white;
 		font-size:18pt;
 		line-height:0.5;
 		margin-bottom: 40px;
-		display:block;
+		display:none;
 		letter-spacing: 0;
 	}
 	.underline:after {

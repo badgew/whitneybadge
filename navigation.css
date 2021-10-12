@@ -25,6 +25,17 @@ li.intro.type{
   top:0;
 }
 
+.index-body .home a{
+  position:absolute;
+  left:40px;
+  top:40px;
+}
+
+.home{
+  left: 40px;
+  top: 40px;
+}
+
 .contact{
   right: 40px;
   top: 40px;
