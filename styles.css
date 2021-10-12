@@ -61,17 +61,18 @@ ol.content, .content ol{
 }
 
 p{
-	font-size:40pt;
-	line-height:42pt;
+	font-size:18pt;
+	line-height:20pt;
 	margin-top:40px;
 	margin-bottom:20px;
 }
 p.main-description{
 	font-size:18pt;
-	line-height:1.25;
+	line-height:1.1;
 	font-weight:100;
 	margin-right:0;
 	margin-left:0;
+	margin-top:20px;
 }
 p.description{
 	font-size:18pt;
@@ -113,9 +114,9 @@ a.title:hover:before{
 	background-color: rgb(251, 251, 251);
 }
 .title{
-	font-size:40pt;
+	font-size:50pt;
 	color:white;
-	line-height:42pt;
+	line-height:52pt;
 	display:inline-block;
 	text-decoration:none;
 	margin-top:20px;
