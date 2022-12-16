@@ -116,7 +116,7 @@ a.title:hover:before{
 .title{
 	font-size:50pt;
 	color:white;
-	line-height:52pt;
+	line-height:100%;
 	display:inline-block;
 	text-decoration:none;
 	margin-top:20px;
@@ -164,27 +164,6 @@ a.title:hover{
     box-shadow: 0 0 10px 2px rgba(255,221,46,0.5);
     cursor:pointer;
 } 
-
-/*.fade-black{
-	position: fixed;
-    width: 100%;
-    height: 80px;
-    opacity:100%;
-    top: 0;
-    left: 0;
-	background: rgb(0,0,0);
-	background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(251,251,251,0) 100%);
-}
-
-.fade-white{
-	position: absolute;
-    width: 100%;
-    height: 80px;
-    top: 20px;
-    left: 0;
-	background: rgb(0,0,0);
-	background: linear-gradient(180deg, rgba(251,251,251,1) 10%, rgba(0,0,0,0) 100%);
-}*/
 
 .thumbnails{
 	max-height:calc(100vh - 60px);
