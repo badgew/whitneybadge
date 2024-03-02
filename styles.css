@@ -52,7 +52,7 @@ body.main{
 
 ol.content, .content ol{
 	list-style:none;
-	padding-top:30px;
+	padding-top:15px;
 	padding-left:0px;
 }
 *{
@@ -126,7 +126,7 @@ a.title:hover:before{
 	color:black;
 	touch-action: none;
 	margin-top:0px;
-	line-height:1.05;
+	line-height:1.00;
 }
 
 .title:hover span.project-type {
