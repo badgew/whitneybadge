@@ -284,9 +284,13 @@ color: white;
   height: 4px;
 }
 
+.footer {
+	position: fixed;
+	bottom:0px;
+}
 
 /* normal carousel NON HOVER styles */
-.carousel {
+/*.carousel {
     position: relative;
     overflow: hidden;
     z-index: 10001;
@@ -342,7 +346,7 @@ color: white;
     width: 10%;
     cursor: pointer;
     z-index: 1;
-}
+}*/
 
 /* responsive scaling */
 /* Small only */
@@ -424,6 +428,11 @@ color: white;
   		transition-duration: 0.5s;
   		transition-timing-function: ease-out;
 	}
+
+	.footer {
+		position: absolute;
+		bottom:0px;
+	}
 }
 
 
@@ -472,7 +481,3 @@ color: white;
 	}*/
 }
 
-.footer {
-	position: fixed;
-	bottom:0px;
-}
