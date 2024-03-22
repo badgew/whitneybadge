@@ -465,19 +465,5 @@ color: white;
 	h3{
 		font-size:15pt;
 	}
-
-/*	.underline:after {
-  		content: "";
-  		position: absolute;
-  		z-index: -1;
-  		right: 0;
-  		width: 100%;
-  		bottom: 6px;
-  		background: #000;
-  		height: 4px;
-  		transition-property: width;
-  		transition-duration: 0.5s;
-  		transition-timing-function: ease-out;
-	}*/
 }
 
