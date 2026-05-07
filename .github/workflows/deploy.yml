@@ -28,15 +28,16 @@ jobs:
           ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy via rsync
+        id: rsync
         run: |
           DRY_RUN=${{ github.event.inputs.dry_run }}
           FLAGS="-avz --checksum --delete"
           if [ "$DRY_RUN" = "true" ]; then
             FLAGS="$FLAGS --dry-run"
-            echo "⚠️  DRY RUN MODE: no files will be changed on the server for this run"
           fi
 
-          rsync $FLAGS \
+          # Run rsync and capture output
+          RSYNC_OUTPUT=$(rsync $FLAGS \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='cgi-bin/' \
@@ -50,4 +51,66 @@ jobs:
             --exclude='*.mp4' \
             --exclude='*.mov' \
             -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no" \
-            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/whitneyb/public_html/
+            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/whitneyb/public_html/ 2>/dev/null)
+
+          # Save output for summary step
+          echo "$RSYNC_OUTPUT" > /tmp/rsync_output.txt
+          echo "dry_run=$DRY_RUN" >> $GITHUB_OUTPUT
+
+      - name: Summary
+        run: |
+          DRY_RUN=${{ steps.rsync.outputs.dry_run }}
+          OUTPUT=$(cat /tmp/rsync_output.txt)
+
+          # Parse uploads (lines that are files, not dirs, not deleting)
+          UPLOADS=$(echo "$OUTPUT" | grep -v '^\*deleting' | grep -v '/$' | grep -v '^sending' | grep -v '^sent' | grep -v '^total' | grep -v '^\.' | grep -v '^$' | grep '/')
+          # Also catch root-level files (no slash)
+          ROOT_FILES=$(echo "$OUTPUT" | grep -v '^\*deleting' | grep -v '/$' | grep -v '^sending' | grep -v '^sent' | grep -v '^total' | grep -v '^\.' | grep -v '^$' | grep -v '/')
+          ALL_UPLOADS=$(echo -e "$UPLOADS\n$ROOT_FILES" | grep -v '^$' | sort)
+
+          DELETES=$(echo "$OUTPUT" | grep '^\*deleting' | sed 's/\*deleting //')
+
+          UPLOAD_COUNT=$(echo "$ALL_UPLOADS" | grep -c . || true)
+          DELETE_COUNT=$(echo "$DELETES" | grep -c . || true)
+
+          if [ "$DRY_RUN" = "true" ]; then
+            MODE="🔍 DRY RUN MODE: no files will be changed on the server for this run"
+          else
+            MODE="🚀 DEPLOYED: changes are now live"
+          fi
+
+          echo ""
+          echo "========================================"
+          echo "$MODE"
+          echo "========================================"
+          echo ""
+
+          if [ "$UPLOAD_COUNT" -eq 0 ] && [ "$DELETE_COUNT" -eq 0 ]; then
+            echo "✅ Everything is up to date. No changes needed."
+          else
+            if [ "$UPLOAD_COUNT" -gt 0 ]; then
+              if [ "$DRY_RUN" = "true" ]; then
+                echo "📤 Files that WOULD be uploaded ($UPLOAD_COUNT):"
+              else
+                echo "📤 Files uploaded ($UPLOAD_COUNT):"
+              fi
+              echo "$ALL_UPLOADS" | while read -r f; do
+                echo "   + $f"
+              done
+              echo ""
+            fi
+
+            if [ "$DELETE_COUNT" -gt 0 ]; then
+              if [ "$DRY_RUN" = "true" ]; then
+                echo "🗑  Files that WOULD be deleted ($DELETE_COUNT):"
+              else
+                echo "🗑  Files deleted ($DELETE_COUNT):"
+              fi
+              echo "$DELETES" | while read -r f; do
+                echo "   - $f"
+              done
+              echo ""
+            fi
+          fi
+
+          echo "========================================"
