@@ -53,7 +53,6 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no" \
             ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/whitneyb/public_html/ 2>/dev/null)
 
-          # Save output for summary step
           echo "$RSYNC_OUTPUT" > /tmp/rsync_output.txt
           echo "dry_run=$DRY_RUN" >> $GITHUB_OUTPUT
 
@@ -62,21 +61,27 @@ jobs:
           DRY_RUN=${{ steps.rsync.outputs.dry_run }}
           OUTPUT=$(cat /tmp/rsync_output.txt)
 
-          # Parse uploads (lines that are files, not dirs, not deleting)
-          UPLOADS=$(echo "$OUTPUT" | grep -v '^\*deleting' | grep -v '/$' | grep -v '^sending' | grep -v '^sent' | grep -v '^total' | grep -v '^\.' | grep -v '^$' | grep '/')
-          # Also catch root-level files (no slash)
-          ROOT_FILES=$(echo "$OUTPUT" | grep -v '^\*deleting' | grep -v '/$' | grep -v '^sending' | grep -v '^sent' | grep -v '^total' | grep -v '^\.' | grep -v '^$' | grep -v '/')
-          ALL_UPLOADS=$(echo -e "$UPLOADS\n$ROOT_FILES" | grep -v '^$' | sort)
+          # Parse uploads — files only (no dirs, no deleting lines, no rsync summary lines)
+          ALL_UPLOADS=$(echo "$OUTPUT" \
+            | grep -v '^\*deleting' \
+            | grep -v '/$' \
+            | grep -v '^sending' \
+            | grep -v '^sent' \
+            | grep -v '^total' \
+            | grep -v '^\.' \
+            | grep -v '^$' \
+            || true)
 
-          DELETES=$(echo "$OUTPUT" | grep '^\*deleting' | sed 's/\*deleting //')
+          DELETES=$(echo "$OUTPUT" | grep '^\*deleting' | sed 's/\*deleting //' || true)
 
-          UPLOAD_COUNT=$(echo "$ALL_UPLOADS" | grep -c . || true)
-          DELETE_COUNT=$(echo "$DELETES" | grep -c . || true)
+          # Safe count: avoid grep -c returning exit 1 on no match
+          UPLOAD_COUNT=$(echo "$ALL_UPLOADS" | grep -c '[^[:space:]]' || echo 0)
+          DELETE_COUNT=$(echo "$DELETES" | grep -c '[^[:space:]]' || echo 0)
 
           if [ "$DRY_RUN" = "true" ]; then
             MODE="🔍 DRY RUN MODE: no files will be changed on the server for this run"
           else
-            MODE="🚀 DEPLOYED: changes are now live"
+            MODE="🚀 DEPLOYED — changes are now live"
           fi
 
           echo ""
@@ -95,7 +100,7 @@ jobs:
                 echo "📤 Files uploaded ($UPLOAD_COUNT):"
               fi
               echo "$ALL_UPLOADS" | while read -r f; do
-                echo "   + $f"
+                [ -n "$f" ] && echo "   + $f"
               done
               echo ""
             fi
@@ -107,7 +112,7 @@ jobs:
                 echo "🗑  Files deleted ($DELETE_COUNT):"
               fi
               echo "$DELETES" | while read -r f; do
-                echo "   - $f"
+                [ -n "$f" ] && echo "   - $f"
               done
               echo ""
             fi
