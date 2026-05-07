@@ -30,15 +30,17 @@ jobs:
       - name: Deploy via rsync
         run: |
           DRY_RUN=${{ github.event.inputs.dry_run }}
-          FLAGS="-avz --delete"
+          FLAGS="-avz --checksum --delete"
           if [ "$DRY_RUN" = "true" ]; then
             FLAGS="$FLAGS --dry-run"
-            echo "⚠️  DRY RUN — no files will be changed on the server"
+            echo "⚠️  DRY RUN MODE: no files will be changed on the server for this run"
           fi
 
           rsync $FLAGS \
             --exclude='.git/' \
             --exclude='.github/' \
+            --exclude='cgi-bin/' \
+            --exclude='.well-known/' \
             --exclude='*.jpg' \
             --exclude='*.jpeg' \
             --exclude='*.png' \
